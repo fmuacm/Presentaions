@@ -1,0 +1,87 @@
+Installing Git/Github
+
+Will Dixon
+Software Developer, ACS Technologies
+will.dixon@acstechnologies.com
+
+Trey Watford
+Software Developer, ACS Technologies
+will.dixon@acstechnologies.com
+
+* What is Git?
+
+- Versions your codes
+- See changes
+- Revert changes
+- See who made the changes
+- Collaborate on code
+
+* Installing Git
+
+.link https://git-scm.com/book/en/v2/Getting-Started-Installing-Git Git-SCM Install Docs
+
+.link https://git-scm.com/download/linux *Linux*(Fedora*based)*
+
+    sudo yum install git-all
+    sudo dnf install git-all
+
+.link https://git-scm.com/download/linux *Linux*(Debian*based)*
+
+    sudo apt-get install git-all
+
+.link https://git-scm.com/download/mac *Mac*
+
+    brew install git-all
+
+.link https://git-scm.com/download/windows *Windows*
+
+Must use installer from link
+
+* Configure Git
+
+- Change Git Name
+    git config --global user.name "Will Dixon"
+- Change Email
+    git config --global user.email "dixonwille@hotmail.com"
+
+* What is Github?
+
+- Online git repository
+- Specifiy permissions for repository
+- Create Tasks and Issues
+- Pull Request/Code Review
+
+* Create an account
+
+* Create SSH Keys
+
+These keys are used so that git know that you are who you say you are.
+
+    ssh-keygen -t rsa
+
+Press enter for all values for defaults.
+
+* Add keys to Github
+
+In `$HOME/.ssh` there is an `id_rsa.pub` file.
+
+- Copy the contents
+- Goto Github Settings
+- Goto _SSH_and_GPG_Keys_
+.link https://github.com/settings/keys
+- Click _New_SSH_Key_
+- Give it a meaningful name
+- Paste the contents
+
+* Test keys
+
+    ssh git@github.com
+
+Should state your name and that you are authenticated correctly, but github does not have an SSH socket.
+
+* Further Help
+
+- Ask for help here
+.link https://florenceinnovate.slack.com
+- Check out the FMU ACM Wiki
+.link https://fmuacm.github.io
