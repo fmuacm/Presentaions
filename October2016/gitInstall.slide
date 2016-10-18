@@ -67,8 +67,7 @@ In `$HOME/.ssh` there is an `id_rsa.pub` file.
 
 - Copy the contents
 - Goto Github Settings
-- Goto _SSH_and_GPG_Keys_
-.link https://github.com/settings/keys
+- Goto [[https://github.com/settings/keys][_SSH_and_GPG_Keys_]]
 - Click _New_SSH_Key_
 - Give it a meaningful name
 - Paste the contents
@@ -81,7 +80,7 @@ Should state your name and that you are authenticated correctly, but github does
 
 * Further Help
 
-- Ask for help here
+- Ask for help in [[https://florenceinnovate.slack.com][Florence Innovate Slack]]
 .link https://florenceinnovate.slack.com
-- Check out the FMU ACM Wiki
+- Check out the [[https://fmuacm.github.io][FMU ACM Wiki]]
 .link https://fmuacm.github.io

@@ -1,0 +1,144 @@
+Using Git/Github
+
+Will Dixon
+Software Developer, ACS Technologies
+will.dixon@acstechnologies.com
+
+Trey Watford
+Software Developer, ACS Technologies
+will.dixon@acstechnologies.com
+
+* Workflow
+
+The process one takes when creating a new feature.
+
+1.      Create a branch
+2.      Develop feature
+2.5.    Commit changes regularly
+3.      Merge main branch into feature branch
+4.      Create a Pull Request
+5.      Merge Pull Request
+6.      Delete Branch
+7.      Repeate
+
+But we must first "git" the repository.
+
+* Git Clone
+
+Copy the repository locally
+
+    git clone git@github.com:fmuacm/alumniapp.git
+
+This will create a directory called `alumniapp` in the current working directory.
+
+* Git Branch/Checkout
+
+*Create*A*Branch*
+
+    git branch branchName
+
+*Switch*To*Branch*
+
+    git checkout branchName
+
+*All*In*One*
+
+    git checkout -b branchName
+
+* Make your changes
+
+* Git Add/Commit
+
+Add is to tell your git repository what changes you would like to stage for commit.
+
+    git add fileName.txt    #Stage a single file
+    git add --all           #Stage all the changed files
+    git add folder/*        #Stage all the files in directory
+
+Commit is to commit to those changes saying these changes are related.
+
+    git commit                      #Will Prompt for a message
+    git commit -m "Commit Message"  #You supplies a message so no prompt
+
+If you would like to add all changed files and commit in one step:
+
+    git commit -am "Commit Message" #a flag for all changes
+
+* Git Push
+
+For everyone else to get your change you will need to do:
+
+    git push
+
+If you just created your branch Github does not know about it so use:
+
+    git push -u origin branchName
+
+The `-u` flag is used so that git will remember this for you.
+
+* Git Fetch
+
+Fetch will get all the changes but not apply them to your working copy.
+
+    git fetch
+    git fetch --prune #remove old branches
+
+* Git Merge
+
+Merge will merge a branch into another branch
+
+    git merge develop feature
+    git merge origin/develop feature
+
+It should read like "Merge branch develop into branch feature".
+
+That last one is useful if you need the latest changes from the online repositories in your feature branch. 
+
+You may get a merge conflict. To resolve these you can use `git status` to see what files were affected. Edit those files until you are able to resolve all the conflicts
+
+*NOTE:* Don't forget to do a `git fetch` first.
+
+*NOTE:* All of your changes will need to be commited before merging
+
+* Git Pull
+
+If your branch has a remote branch (lives on Github) then you can use:
+
+    git pull
+
+This will fetch and merge the online repository branch with the current branch you are on.
+
+*NOTE:* All of your changes will need to be commited before pulling
+
+* Create a Pull Request
+
+1. Goto your repositories page on github
+2. Click on _New_Pull_Request_
+3. Select the From and To branch
+4. Give Pull Request a title
+5. Give it a message
+5.5 Use the '@' symbole to reference someone so they get notified
+6. Collaborate
+7. Merge the Pull Request by click the Merge button
+8. Delete the branch by clicking the Delete button
+9. Delete locally
+
+* Delete local branch
+
+    git fetch --prune
+    git checkout develop
+    git pull
+    git branch -d branchName
+
+1. Fetch all the changes (removing old references)
+2. Checkout the develop branch
+3. Make sure develop branch is up to date
+4. Delete the old branch
+
+* Further Help
+
+- Ask for help in [[https://florenceinnovate.slack.com][Florence Innovate Slack]]
+.link https://florenceinnovate.slack.com
+- Check out the [[https://fmuacm.github.io][FMU ACM Wiki]]
+.link https://fmuacm.github.io
+- Great course [[https://try.github.io]]
